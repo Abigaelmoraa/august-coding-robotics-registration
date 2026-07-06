@@ -113,7 +113,7 @@ function AuthPage() {
 
           <div className="mt-6 text-center text-sm">
             <Link to="/" className="text-muted-foreground hover:text-foreground">
-              ← Back to registration
+              ← Back to home
             </Link>
           </div>
         </CardContent>
