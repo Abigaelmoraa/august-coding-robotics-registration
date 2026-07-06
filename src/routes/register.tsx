@@ -150,10 +150,10 @@ function RegistrationPage() {
             </div>
           </div>
           <Link
-            to="/admin"
+            to="/"
             className="text-sm font-medium text-muted-foreground hover:text-foreground"
           >
-            Admin
+            ← Home
           </Link>
         </div>
       </header>
