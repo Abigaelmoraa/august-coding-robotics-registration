@@ -29,6 +29,15 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const Route = createFileRoute("/register")({
+  head: () => ({
+    meta: [
+      { title: "Register — August Coding & Robotics" },
+      {
+        name: "description",
+        content: "Register your child for the August Coding & Robotics Program.",
+      },
+    ],
+  }),
   component: RegistrationPage,
 });
 
