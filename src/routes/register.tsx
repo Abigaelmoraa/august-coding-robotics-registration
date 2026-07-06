@@ -197,16 +197,16 @@ function RegistrationPage() {
               <Section title="1. Student Information">
                 <Grid>
                   <Field label="Student's full name" error={errors.student_full_name?.message} required>
-                    <Input {...register("student_full_name")} placeholder="Jane Doe" />
+                    <Input {...register("student_full_name")} placeholder="Full Name" />
                   </Field>
                   <Field label="Student age" error={errors.student_age?.message} required>
-                    <Input type="number" min={4} max={19} {...register("student_age")} placeholder="10" />
+                    <Input type="number" min={4} max={19} {...register("student_age")} placeholder="Age" />
                   </Field>
                   <Field label="Current class/grade" error={errors.student_grade?.message} required>
-                    <Input {...register("student_grade")} placeholder="Grade 5" />
+                    <Input {...register("student_grade")} placeholder="Grade" />
                   </Field>
                   <Field label="School name" error={errors.school_name?.message} required>
-                    <Input {...register("school_name")} placeholder="Springfield Primary" />
+                    <Input {...register("school_name")} placeholder="School Name" />
                   </Field>
                   <Field label="Gender (optional)">
                     <Select
@@ -227,11 +227,11 @@ function RegistrationPage() {
                   </Field>
                 </Grid>
                 <Field label="Parent/guardian name" error={errors.parent_name?.message} required>
-                  <Input {...register("parent_name")} placeholder="John Doe" />
+                  <Input {...register("parent_name")} placeholder="Full Name" />
                 </Field>
                 <Grid>
                   <Field label="Parent phone number" error={errors.parent_phone?.message} required>
-                    <Input {...register("parent_phone")} placeholder="+1 555 123 4567" />
+                    <Input {...register("parent_phone")} placeholder="Phone Number" />
                   </Field>
                   <Field label="Parent email address" error={errors.parent_email?.message} required>
                     <Input type="email" {...register("parent_email")} placeholder="parent@example.com" />
