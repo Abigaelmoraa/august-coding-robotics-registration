@@ -14,16 +14,114 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      registrations: {
+        Row: {
+          additional_notes: string | null
+          area_of_residence: string
+          created_at: string
+          emergency_contact: string | null
+          gender: string | null
+          id: string
+          level: Database["public"]["Enums"]["skill_level"]
+          parent_email: string
+          parent_name: string
+          parent_phone: string
+          preferred_days: string[]
+          preferred_start_date: string
+          program: Database["public"]["Enums"]["program_type"]
+          registration_number: string
+          school_name: string
+          session_pref: Database["public"]["Enums"]["session_pref"]
+          student_age: number
+          student_full_name: string
+          student_grade: string
+          updated_at: string
+        }
+        Insert: {
+          additional_notes?: string | null
+          area_of_residence: string
+          created_at?: string
+          emergency_contact?: string | null
+          gender?: string | null
+          id?: string
+          level: Database["public"]["Enums"]["skill_level"]
+          parent_email: string
+          parent_name: string
+          parent_phone: string
+          preferred_days?: string[]
+          preferred_start_date: string
+          program: Database["public"]["Enums"]["program_type"]
+          registration_number?: string
+          school_name: string
+          session_pref: Database["public"]["Enums"]["session_pref"]
+          student_age: number
+          student_full_name: string
+          student_grade: string
+          updated_at?: string
+        }
+        Update: {
+          additional_notes?: string | null
+          area_of_residence?: string
+          created_at?: string
+          emergency_contact?: string | null
+          gender?: string | null
+          id?: string
+          level?: Database["public"]["Enums"]["skill_level"]
+          parent_email?: string
+          parent_name?: string
+          parent_phone?: string
+          preferred_days?: string[]
+          preferred_start_date?: string
+          program?: Database["public"]["Enums"]["program_type"]
+          registration_number?: string
+          school_name?: string
+          session_pref?: Database["public"]["Enums"]["session_pref"]
+          student_age?: number
+          student_full_name?: string
+          student_grade?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "user"
+      program_type: "coding" | "robotics" | "coding_robotics"
+      session_pref: "morning" | "afternoon" | "evening"
+      skill_level: "beginner" | "intermediate" | "advanced"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +248,11 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "user"],
+      program_type: ["coding", "robotics", "coding_robotics"],
+      session_pref: ["morning", "afternoon", "evening"],
+      skill_level: ["beginner", "intermediate", "advanced"],
+    },
   },
 } as const
