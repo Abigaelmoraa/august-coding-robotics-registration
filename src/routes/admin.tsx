@@ -76,7 +76,7 @@ function AdminPage() {
     (async () => {
       const { data: sess } = await supabase.auth.getSession();
       if (!sess.session) {
-        navigate({ to: "/auth" });
+        navigate({ to: "/login" });
         return;
       }
       const { data: roles } = await supabase
@@ -158,7 +158,7 @@ function AdminPage() {
 
   const handleSignOut = async () => {
     await supabase.auth.signOut();
-    navigate({ to: "/auth" });
+    navigate({ to: "/login" });
   };
 
   const handleDelete = async () => {
