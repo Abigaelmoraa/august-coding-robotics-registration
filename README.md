@@ -1,7 +1,7 @@
 Installation & Setup
 1. Clone the repository
 bash
-git clone https://github.com/abigaelmoraa/august-coding-robotics-registyration.git
+git clone https://github.com/abigaelmoraa/august-coding-robotics-registration.git
 
 
 2. Install dependencies
